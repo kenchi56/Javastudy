@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+	<h1>買取</h1>
+	<input type="radio" name ="condition" value="new">新品
+	<input type="radio" name ="condition" value="used">中古
+	
+	<select name=”number”>
+	<option value=”ten”>iPhone X</option>
+	<option value=”ele”>iPhone 11</option>
+	<option value=”twe”>iPhone 12</option>
+	</select>
+	
+	<select name=”capacity”>
+	<option value=”one”>64GB</option>
+	<option value=”two”>128GB</option>
+	</select>
+	
+	
+	<input type="submit" value="査定">
+	
+	<table>
+	<tr><th>状態</th><th>機種</th></tr>
+	<tr th:each="k : ${kaitori}">
+	<td th:text="${k.con}"></td>
+	<td th:text="${k.type}"></td>
+	<td th:text="${k.capa}"></td>
+	
+	</table>
+	
+	
+	<!-- <label>名前</label><input type="text" name="name">
+	<label>年齢</label><input type="text" name="age">
+	<label>メール</label><input type="text" name="mail">
+	<label>パスワード</label><input type="pass" name="pass"> -->
+	
+	<!-- <input type="submit" value="登録"> -->
+
+</body>
+</html>
